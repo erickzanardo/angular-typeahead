@@ -1,0 +1,27 @@
+<html ng-app="exampleapp">
+    <head>
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/typeaheadjs.css">
+        <script type="text/javascript" src="/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/angular.min.js"></script>
+        <script type="text/javascript" src="/typeahead.jquery.js"></script>
+        <script type="text/javascript" src="https://raw.githubusercontent.com/erickzanardo/angular-typeahead/master/angular-typeahed.js"></script>
+        <script type="text/javascript" src="/controller.js"></script>
+        <style type="text/css">
+            .container {
+                padding-top: 10%;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body ng-controller="ExampleController">
+        <div class="container">
+            <h2>Search for movie names</h2>
+            <input class="form-control input-lg typeahead" type="text" typeahead query-function="search" scope-value="selectedValue" display-key="value">
+            <p>
+                {{selectedValue.value}}
+            </p>
+        </div>
+    </body>
+</html>
